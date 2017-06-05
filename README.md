@@ -2,8 +2,8 @@
 A sample Java program that uses the System.in to take the number of array entries, and the array of numbers to compute for the minimum absolute difference among the array entries
 
 Example Input:
-3
-123
+3 %n
+123 %n
 
 Output:
 1
