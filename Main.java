@@ -1,4 +1,6 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
 
@@ -7,22 +9,18 @@ public class Main {
 		BufferedReader input = new BufferedReader (new InputStreamReader (System.in));
 		int n=Integer.parseInt(input.readLine());
 		String[] array=input.readLine().split("");
-		System.out.println(findMinDiff(n, array));
-	}
-	
-	public static int findMinDiff(int n, String[] array)
-	{
+		
 		int min=0;
 		int test=0;
 		if(n==1||n==0)
 		{
-			return min;
+			min=0;
 		}
 		else
 		{
 			if(Math.abs(Integer.parseInt(array[0])-Integer.parseInt(array[1]))==0)
 			{
-				return min;
+				min=0;
 			}
 			else if(Math.abs(Integer.parseInt(array[0])-Integer.parseInt(array[1]))!=0)
 			{
@@ -53,6 +51,7 @@ public class Main {
 				}
 			}
 		}
-		return min;
+		
+		System.out.println(min);
 	}
 }
